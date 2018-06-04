@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="{{ url_for('static', filename="home.css") }}" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Cuprum" />
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<header>
+    <h2>Thomas's Site</h2>
+    <hr align="left" width="60%">
+    <a class= "home" href="/home">Home</a>
+    <h4 class="dotone">&middot;</h4>
+    <a class= "profile" href="/profile">Profile</a>
+    <h4 class="dottwo">&middot;</h4>
+    <a class= "logout" href="/logout">Logout</a>
+</header>
+<body>
+<h1>Welcome Home {{ current_user.name }}!</h1>
+<h3>Choose a game:</h3>
+<form method="POST">
+<select name="option" class="choices">
+    <option>Number Guessing Game</option>
+    <option>Team Generator</option>
+</select>
+<hr class="underline" width="500px">
+<button type="Submit" class="button">Submit</button>
+</form>
+<br><br>
+</body>
+</html>
